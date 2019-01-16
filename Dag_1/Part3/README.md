@@ -9,17 +9,17 @@ When answering the questions, remember to use all the resources at your disposal
  > Concurrency – processes executed at the same time, but it is sufficient for the processes to appear to be executed simultaneously. Parallellism - processes run in parallell. 
  
  ### Why have machines become increasingly multicore in the past decade?
- > Increased processing speed
+ > Increased processing speed, more energy efficient. 
 
  
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
- > Separate processes and independent processes,  which should be executed simultaneously
+ > Separate processes and independent processes,  which should be executed seemingly simultaneously. It can advance without waiting for all other computations to complete. 
 
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
- > Both, it introduces a new set of problems/issues, but also make it easier for some classes of problems. 
+ > Both, it introduces a new set of problems/issues, but also make it easier for some classes of problems. Multithreading makes solving many processes easier, but can make the debugging process more difficult. 
 
  
  ### What are the differences between processes, threads, green threads, and coroutines?
@@ -29,7 +29,7 @@ When answering the questions, remember to use all the resources at your disposal
  > Coroutines – done sequentially, not in parallel as with the others. 
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > The first two creates a thread, go greate a couroutine. 
+ > The first two creates a thread, go create a couroutine. 
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > It prevents multiple threads to access the Python bytecode at the same time. 
