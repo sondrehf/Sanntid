@@ -19,19 +19,24 @@ When answering the questions, remember to use all the resources at your disposal
  
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
- > *Your answer here*
+ > Both, it introduces a new set of problems/issues, but also make it easier for some classes of problems. 
+
  
  ### What are the differences between processes, threads, green threads, and coroutines?
- > *Your answer here*
+ > Process – OS-managed with own address space. 
+ > Threads – OS-managed within same address space. 
+ > Green threads – User-managed 
+ > Coroutines – done sequentially, not in parallel as with the others. 
  
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > *Your answer here*
+ > The first two creates a thread, go greate a couroutine. 
  
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > *Your answer here*
+ > It prevents multiple threads to access the Python bytecode at the same time. 
  
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > *Your answer here*
+ > The multiprocessing package
  
  ### What does `func GOMAXPROCS(n int) int` change? 
- > *Your answer here*
+ > Increases the amount of allocated operating system threads in a Go program 
+
