@@ -5,9 +5,9 @@
 -export([start/0]).
 
 start() ->
-    Ns = spawn(fun() -> number_server(17) end),
+    Ns = spawn(fun() -> number_server(0) end),
     spawn(fun() -> increment(Ns, 1000000) end),
-    spawn(fun() -> decrement(Ns, 1000017) end),
+    spawn(fun() -> decrement(Ns, 1000000) end),
     
     timer:sleep(2000),
 
@@ -23,6 +23,7 @@ increment(_Ns, 0) ->
     ok;
 increment(Ns, TimesLeft) ->
     % TODO: Send a message to the number server to increment the number (HINT: messages are sent with the ! operator)
+    Ns ! increment_number,
     increment(Ns, TimesLeft-1).
 
 
@@ -30,6 +31,7 @@ decrement(_Ns, 0) ->
     ok;
 decrement(Ns, TimesLeft) ->
     % TODO: Send a message to the number server to decrement the number (HINT: messages are sent with the ! operator)
+    Ns ! decrement_number,
     decrement(Ns, TimesLeft-1).
 
 
