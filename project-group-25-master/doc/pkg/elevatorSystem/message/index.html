@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>message - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../lib/godoc/jquery.treeview.css">
+<script>window.initFuncs = [];</script>
+
+<script src="../../../lib/godoc/jquery.js" defer></script>
+<script src="../../../lib/godoc/jquery.treeview.js" defer></script>
+<script src="../../../lib/godoc/jquery.treeview.edit.js" defer></script>
+
+
+<script>var goVersion = "go1.11.5";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+<a href="http://localhost:8080/doc/">Documents</a>
+<a href="http://localhost:8080/pkg/">Packages</a>
+<a href="http://localhost:8080/project/">The Project</a>
+<a href="http://localhost:8080/help/">Help</a>
+
+<a href="http://localhost:8080/blog/">Blog</a>
+
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package message
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "elevatorSystem/message"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#MessageServer">func MessageServer(elevatorID int, send_broadcast_message &lt;-chan Message, broadcast_message chan&lt;- Message)</a></dd>
+			
+			
+				
+				<dd><a href="index.html#ElevID">type ElevID</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Message">type Message</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CreateMessageFromOrders">func CreateMessageFromOrders(msgID int, toID int, fromID int, currentFloor int, msgType MessageType, orders ...order.Order) Message</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CreateMessageFromQueue">func CreateMessageFromQueue(msgID int, toID int, fromID int, currentFloor int, msgType MessageType, queue [][]bool) Message</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#MessageType">type MessageType</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/elevatorSystem/message/message.go">message.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="ADD_ORDER">ADD_ORDER</span> = <a href="../../builtin/index.html#iota">iota</a>
+    <span id="ACK">ACK</span>
+    <span id="I_AM_ALIVE">I_AM_ALIVE</span>
+    <span id="LIGHT_ON">LIGHT_ON</span>
+    <span id="LIGHT_OFF">LIGHT_OFF</span>
+    <span id="REQUEST_CAB_CALL">REQUEST_CAB_CALL</span>
+    <span id="REQUEST_CAB_CALL_ACK">REQUEST_CAB_CALL_ACK</span>
+)</pre>
+			
+				
+				<pre>const (
+    <span id="ALL_ELEV">ALL_ELEV</span> = -1
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="MessageServer">func <a href="http://localhost:8080/src/elevatorSystem/message/message.go?s=1425:1532#L45">MessageServer</a>
+				<a class="permalink" href="index.html#MessageServer">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func MessageServer(elevatorID <a href="../../builtin/index.html#int">int</a>, send_broadcast_message &lt;-chan <a href="index.html#Message">Message</a>, broadcast_message chan&lt;- <a href="index.html#Message">Message</a>)</pre>
+			<p>
+MessageServer called as a goroutine that transmits all active messages repetitious (maximum 10 times),
+and stop sending them when receiving an acknowledgement from the receiver.
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="ElevID">type <a href="http://localhost:8080/src/elevatorSystem/message/message.go?s=342:357#L20">ElevID</a>
+				<a class="permalink" href="index.html#ElevID">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type ElevID <a href="../../builtin/index.html#int">int</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="Message">type <a href="http://localhost:8080/src/elevatorSystem/message/message.go?s=191:340#L11">Message</a>
+				<a class="permalink" href="index.html#Message">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type Message struct {
+<span id="Message.MsgID"></span>    MsgID        <a href="../../builtin/index.html#int">int</a>
+<span id="Message.ToID"></span>    ToID         <a href="../../builtin/index.html#int">int</a>
+<span id="Message.FromID"></span>    FromID       <a href="../../builtin/index.html#int">int</a>
+<span id="Message.CurrentFloor"></span>    CurrentFloor <a href="../../builtin/index.html#int">int</a>
+<span id="Message.MsgType"></span>    MsgType      <a href="index.html#MessageType">MessageType</a>
+<span id="Message.Orders"></span>    Orders       []<a href="http://localhost:8080/order/">order</a>.<a href="http://localhost:8080/order/#Order">Order</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateMessageFromOrders">func <a href="http://localhost:8080/src/elevatorSystem/message/message.go?s=483:614#L26">CreateMessageFromOrders</a>
+					<a class="permalink" href="index.html#CreateMessageFromOrders">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CreateMessageFromOrders(msgID <a href="../../builtin/index.html#int">int</a>, toID <a href="../../builtin/index.html#int">int</a>, fromID <a href="../../builtin/index.html#int">int</a>, currentFloor <a href="../../builtin/index.html#int">int</a>, msgType <a href="index.html#MessageType">MessageType</a>, orders ...<a href="http://localhost:8080/order/">order</a>.<a href="http://localhost:8080/order/#Order">Order</a>) <a href="index.html#Message">Message</a></pre>
+				<p>
+CreateMessageFromOrders returns a message struct in the right format from one or multiple orders
+</p>
+
+				
+				
+			
+				
+				<h3 id="CreateMessageFromQueue">func <a href="http://localhost:8080/src/elevatorSystem/message/message.go?s=816:939#L31">CreateMessageFromQueue</a>
+					<a class="permalink" href="index.html#CreateMessageFromQueue">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CreateMessageFromQueue(msgID <a href="../../builtin/index.html#int">int</a>, toID <a href="../../builtin/index.html#int">int</a>, fromID <a href="../../builtin/index.html#int">int</a>, currentFloor <a href="../../builtin/index.html#int">int</a>, msgType <a href="index.html#MessageType">MessageType</a>, queue [][]<a href="../../builtin/index.html#bool">bool</a>) <a href="index.html#Message">Message</a></pre>
+				<p>
+CreateMessageFromOrders returns a message struct in the right format from an elevator&#39;s queue. Used when retrieving cab calls
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="MessageType">type <a href="http://localhost:8080/src/elevatorSystem/message/message.go?s=62:82#L1">MessageType</a>
+				<a class="permalink" href="index.html#MessageType">&#xb6;</a>
+				
+				
+			</h2>
+			
+			<pre>type MessageType <a href="../../builtin/index.html#int">int</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.11.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:8080/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+</body>
+</html>
+

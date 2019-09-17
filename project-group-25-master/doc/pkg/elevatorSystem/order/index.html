@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>order - The Go Programming Language</title>
+
+<link type="text/css" rel="stylesheet" href="../../../lib/godoc/style.css">
+
+<link rel="stylesheet" href="../../../lib/godoc/jquery.treeview.css">
+<script>window.initFuncs = [];</script>
+
+<script src="../../../lib/godoc/jquery.js" defer></script>
+<script src="../../../lib/godoc/jquery.treeview.js" defer></script>
+<script src="../../../lib/godoc/jquery.treeview.edit.js" defer></script>
+
+
+<script>var goVersion = "go1.11.5";</script>
+<script src="../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:8080/">The Go Programming Language</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:8080/">Go</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8080/search">
+<div id="menu">
+<a href="http://localhost:8080/doc/">Documents</a>
+<a href="http://localhost:8080/pkg/">Packages</a>
+<a href="http://localhost:8080/project/">The Project</a>
+<a href="http://localhost:8080/help/">Help</a>
+
+<a href="http://localhost:8080/blog/">Blog</a>
+
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package order
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "elevatorSystem/order"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="index.html#pkg-constants">Constants</a></dd>
+			
+			
+			
+				
+				<dd><a href="index.html#AddOrderToDatabase">func AddOrderToDatabase(database [][][]bool, elevatorID int, order Order)</a></dd>
+			
+				
+				<dd><a href="index.html#AddToQueue">func AddToQueue(queue [][]bool, order Order)</a></dd>
+			
+				
+				<dd><a href="index.html#CreateEmptyDatabase">func CreateEmptyDatabase(elevatorID int, numberOfFloors int) [][][]bool</a></dd>
+			
+				
+				<dd><a href="index.html#CreateEmptyQueue">func CreateEmptyQueue(numberOfFloors int) [][]bool</a></dd>
+			
+				
+				<dd><a href="index.html#CreateQueueFromOrders">func CreateQueueFromOrders(numberOfFloors int, orders []Order) [][]bool</a></dd>
+			
+				
+				<dd><a href="index.html#RemoveFromQueue">func RemoveFromQueue(queue [][]bool, order Order)</a></dd>
+			
+				
+				<dd><a href="index.html#RemoveOrderFromDatabase">func RemoveOrderFromDatabase(database [][][]bool, elevatorID int, order Order)</a></dd>
+			
+				
+				<dd><a href="index.html#UpdateDatabaseQueue">func UpdateDatabaseQueue(database [][][]bool, elevatorID int, queue [][]bool, numberOfFloors int) [][][]bool</a></dd>
+			
+			
+				
+				<dd><a href="index.html#Light">type Light</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#SetLight">func SetLight(orders Order, setLight bool) Light</a></dd>
+				
+				
+			
+				
+				<dd><a href="index.html#Order">type Order</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#CreateOrder">func CreateOrder(floor int, button elevio.ButtonType) Order</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="index.html#GetCabcallsFromDatabase">func GetCabcallsFromDatabase(database [][][]bool, elevID int) []Order</a></dd>
+				
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8080/src/elevatorSystem/order/order.go">order.go</a>
+			
+				<a href="http://localhost:8080/src/elevatorSystem/order/orderFunctions.go">orderFunctions.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				<p>
+const variable
+</p>
+
+				<pre>const (
+    <span id="NumFloors">NumFloors</span> = 4
+    <span id="NumBtns">NumBtns</span>   = 3
+)</pre>
+			
+		
+		
+		
+			
+			
+			<h2 id="AddOrderToDatabase">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=2258:2331#L70">AddOrderToDatabase</a>
+				<a class="permalink" href="index.html#AddOrderToDatabase">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func AddOrderToDatabase(database [][][]<a href="../../builtin/index.html#bool">bool</a>, elevatorID <a href="../../builtin/index.html#int">int</a>, order <a href="index.html#Order">Order</a>)</pre>
+			<p>
+AddOrderToDatabase adds an order to the database
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="AddToQueue">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=1221:1265#L42">AddToQueue</a>
+				<a class="permalink" href="index.html#AddToQueue">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func AddToQueue(queue [][]<a href="../../builtin/index.html#bool">bool</a>, order <a href="index.html#Order">Order</a>)</pre>
+			<p>
+AddToQueue adds an order to the local queue
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateEmptyDatabase">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=1558:1629#L52">CreateEmptyDatabase</a>
+				<a class="permalink" href="index.html#CreateEmptyDatabase">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func CreateEmptyDatabase(elevatorID <a href="../../builtin/index.html#int">int</a>, numberOfFloors <a href="../../builtin/index.html#int">int</a>) [][][]<a href="../../builtin/index.html#bool">bool</a></pre>
+			<p>
+CreateEmptyDatabase creates a third dimensional array with orders for all active elevators
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateEmptyQueue">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=688:738#L23">CreateEmptyQueue</a>
+				<a class="permalink" href="index.html#CreateEmptyQueue">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func CreateEmptyQueue(numberOfFloors <a href="../../builtin/index.html#int">int</a>) [][]<a href="../../builtin/index.html#bool">bool</a></pre>
+			<p>
+CreateEmptyQueue creates an empty queue at each elevator
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="CreateQueueFromOrders">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=965:1036#L33">CreateQueueFromOrders</a>
+				<a class="permalink" href="index.html#CreateQueueFromOrders">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func CreateQueueFromOrders(numberOfFloors <a href="../../builtin/index.html#int">int</a>, orders []<a href="index.html#Order">Order</a>) [][]<a href="../../builtin/index.html#bool">bool</a></pre>
+			<p>
+CreateQueueFromOrders creates an empty queue and adds all the active orders
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RemoveFromQueue">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=1368:1417#L47">RemoveFromQueue</a>
+				<a class="permalink" href="index.html#RemoveFromQueue">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func RemoveFromQueue(queue [][]<a href="../../builtin/index.html#bool">bool</a>, order <a href="index.html#Order">Order</a>)</pre>
+			<p>
+RemoveFromQueue removes an order from the local queue
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="RemoveOrderFromDatabase">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=2454:2532#L75">RemoveOrderFromDatabase</a>
+				<a class="permalink" href="index.html#RemoveOrderFromDatabase">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func RemoveOrderFromDatabase(database [][][]<a href="../../builtin/index.html#bool">bool</a>, elevatorID <a href="../../builtin/index.html#int">int</a>, order <a href="index.html#Order">Order</a>)</pre>
+			<p>
+RemoveOrderFromDatabase removes an order from the database
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="UpdateDatabaseQueue">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=1819:1927#L59">UpdateDatabaseQueue</a>
+				<a class="permalink" href="index.html#UpdateDatabaseQueue">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func UpdateDatabaseQueue(database [][][]<a href="../../builtin/index.html#bool">bool</a>, elevatorID <a href="../../builtin/index.html#int">int</a>, queue [][]<a href="../../builtin/index.html#bool">bool</a>, numberOfFloors <a href="../../builtin/index.html#int">int</a>) [][][]<a href="../../builtin/index.html#bool">bool</a></pre>
+			<p>
+UpdateDatabaseQueue updates the local queue at each elevator
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Light">type <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=239:291#L7">Light</a>
+				<a class="permalink" href="index.html#Light">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Light is a struct used to turn lights on and off for one order
+</p>
+
+			<pre>type Light struct {
+<span id="Light.SetLight"></span>    SetLight <a href="../../builtin/index.html#bool">bool</a>
+<span id="Light.Orders"></span>    Orders   <a href="index.html#Order">Order</a>
+}
+</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="SetLight">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=543:591#L18">SetLight</a>
+					<a class="permalink" href="index.html#SetLight">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func SetLight(orders <a href="index.html#Order">Order</a>, setLight <a href="../../builtin/index.html#bool">bool</a>) <a href="index.html#Light">Light</a></pre>
+				<p>
+SetLight returns an Light struct for the given order and situation.
+</p>
+
+				
+				
+			
+
+			
+		
+			
+			
+			<h2 id="Order">type <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=143:172#L4">Order</a>
+				<a class="permalink" href="index.html#Order">&#xb6;</a>
+				
+				
+			</h2>
+			<p>
+Order renaming elevio.ButtonEvent to Order
+</p>
+
+			<pre>type Order <a href="http://localhost:8080/elevio/">elevio</a>.<a href="http://localhost:8080/elevio/#ButtonEvent">ButtonEvent</a></pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="CreateOrder">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=379:438#L13">CreateOrder</a>
+					<a class="permalink" href="index.html#CreateOrder">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func CreateOrder(floor <a href="../../builtin/index.html#int">int</a>, button <a href="http://localhost:8080/elevio/">elevio</a>.<a href="http://localhost:8080/elevio/#ButtonType">ButtonType</a>) <a href="index.html#Order">Order</a></pre>
+				<p>
+CreateOrder takes the arguments floor and a buttontype, and returns an order struct
+</p>
+
+				
+				
+			
+				
+				<h3 id="GetCabcallsFromDatabase">func <a href="http://localhost:8080/src/elevatorSystem/order/order.go?s=2683:2752#L80">GetCabcallsFromDatabase</a>
+					<a class="permalink" href="index.html#GetCabcallsFromDatabase">&#xb6;</a>
+					
+					
+				</h3>
+				<pre>func GetCabcallsFromDatabase(database [][][]<a href="../../builtin/index.html#bool">bool</a>, elevID <a href="../../builtin/index.html#int">int</a>) []<a href="index.html#Order">Order</a></pre>
+				<p>
+GetCabcallsFromDatabase retrieves the cabcalls for a given elevator from the database
+</p>
+
+				
+				
+			
+
+			
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.11.5.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8080/LICENSE">BSD license</a>.<br>
+<a href="http://localhost:8080/doc/tos.html">Terms of Service</a> |
+<a href="http://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+
+</body>
+</html>
+
